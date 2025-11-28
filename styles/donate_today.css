@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/* .inter-<uniquifier> {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+} */
+
+/* Root style */
+
+html {
+    font-size: 62.5%;
+    /* normally the font size is 16px so 1rem = 16px but
+    for easier calculation i have set it to 62.5% fo 16px that means now 1rem =10px
+    because 62.5% of 16px is 10px */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+    font-size: 62.5%;
+}
+
+/* Banner section related styles */
+
+header {
+  background: linear-gradient(0.00deg, rgba(18.06, 18.06, 18.06, 1),rgba(18.06, 18.06, 18.06, 0) 100%);
+  background-image: linear-gradient(0.00deg, rgba(18.06, 18.06, 18.06, 1),rgba(18.06, 18.06, 18.06, 0) 100%) ,url('../assets/images/donation9.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.banner {
+  /* padding: 174px 307px; */
+  text-align: center;
+}
+
+
+.banner .banner-title {
+  padding-top: 174px;
+  font-size: 6.5rem;
+  color: rgba(255, 255, 255, 1);
+  font-weight: 700;
+  line-height: 7.9rem;
+  text-align: center;
+  max-width: 826px;
+  margin: 0 auto;
+}
+
+.banner .banner-description {
+  color: rgba(255, 255, 255, 1);
+  font-family: Poppins;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 2.8rem;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 46px;
+  max-width: 691px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.banner .btn-primary {
+  color: rgba(255, 255, 255, 1);
+  font-family: Inter;
+  font-size: 2rem;
+  font-weight: 600;
+  border-radius: 5px;
+  background: rgba(255, 89, 89, 1);
+  padding: 16px 20px;
+  border: 2px solid rgba(255, 89, 89, 1);
+  margin-bottom: 174px;
+}
+
+.banner .btn-primary:hover {
+  color: rgba(255, 89, 89, 1);
+  background: rgba(255, 255, 255, 1);
+  border: 2px solid rgba(255, 89, 89, 1);
+  transition: 0.25s ease-in;
+}
+
+
+/* responsive media query  */
+
+@media screen and (max-width: 576px) {
+  /* banner section */
+  .banner {
+    padding: 10px 30px;
+  }
+
+  .banner .banner-title {
+    font-size: 4.5rem;
+    line-height: 5.9rem;
+  }
+}
+
