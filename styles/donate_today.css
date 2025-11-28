@@ -204,6 +204,7 @@ header {
 
 .donate-plan-container .plan-card {
   padding: 63px 22px 54px 22px;
+  border-radius: 5px;
 }
 
 .card-title {
@@ -223,6 +224,18 @@ header {
   font-weight: 400;
   line-height: 2.5rem;
   max-width: 315px;
+}
+
+#card-1 {
+  background: rgba(79, 157, 166, 0.1);
+}
+
+#card-2 {
+  background: rgba(255, 89, 89, 0.1);
+}
+
+#card-3 {
+  background: rgba(255, 244, 214, 1);
 }
 
 /* responsive media query (for mobile) */
@@ -252,6 +265,12 @@ header {
     grid-template-columns: repeat(1, 1fr);
   }
 
+  /* donate plan section */
+  .donate-plan .donate-plan-container {
+    flex-direction: column;
+    padding: 20px;
+  }
+
 }
 
 /* for medium device (tab) media query */
@@ -261,6 +280,11 @@ header {
   .donate .donate-amount-container {
     grid-template-columns: repeat(3, 1fr);
     gap: 60px;
+  }
+
+  /* donate plan section */
+  .donate-plan .donate-plan-container {
+    flex-wrap: wrap;
   }
 
 }
