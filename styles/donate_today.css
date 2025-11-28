@@ -24,6 +24,51 @@ html {
     font-size: 62.5%;
 }
 
+main {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+/* Shared styles section  */
+ .btn-primary {
+  color: rgba(255, 255, 255, 1);
+  font-family: Inter;
+  font-size: 2rem;
+  font-weight: 600;
+  border-radius: 5px;
+  background: rgba(255, 89, 89, 1);
+  padding: 16px 20px;
+  border: 2px solid rgba(255, 89, 89, 1);
+  margin-bottom: 174px;
+}
+
+ .btn-primary:hover {
+  color: rgba(255, 89, 89, 1);
+  background: rgba(255, 255, 255, 1);
+  border: 2px solid rgba(255, 89, 89, 1);
+  transition: 0.25s ease-in;
+}
+
+.section-title {
+  color: rgba(18, 18, 18, 1);
+  font-family: Inter;
+  font-size: 6.5rem;
+  font-weight: 700;
+  line-height: 6rem;
+  text-align: center;
+}
+
+.section-description {
+  color: rgba(112, 112, 112, 1);
+  font-family: Poppins;
+  font-size: 2.5rem;
+  font-weight: 400;
+  line-height: 3rem;
+  max-width: 691px;
+  margin: 0 auto;
+  text-align: center;
+}
+
 /* Banner section related styles */
 
 header {
@@ -66,27 +111,121 @@ header {
   margin-right: auto;
 }
 
-.banner .btn-primary {
-  color: rgba(255, 255, 255, 1);
-  font-family: Inter;
-  font-size: 2rem;
-  font-weight: 600;
+/* Donate section related styles */
+
+.donate {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.donate .section-title {
+  margin-top: 130px;
+  margin-bottom: 20px;
+}
+
+.donate-amount-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 24px;
+  /* padding: 0 181px; */
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.amount {
   border-radius: 5px;
-  background: rgba(255, 89, 89, 1);
-  padding: 16px 20px;
-  border: 2px solid rgba(255, 89, 89, 1);
-  margin-bottom: 174px;
+  background: rgba(250, 250, 250, 1);
+  border: 2px solid rgba(250, 250, 250, 1);
+  color: rgba(112, 112, 112, 1);
+  font-family: Inter;
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 4rem;
+  padding: 44px 24px;
 }
 
-.banner .btn-primary:hover {
+.amount:hover, .amount:focus {
+  border: 2px solid rgba(255, 89, 89, 1);
+  background: rgba(255, 238, 238, 1);
   color: rgba(255, 89, 89, 1);
-  background: rgba(255, 255, 255, 1);
-  border: 2px solid rgba(255, 89, 89, 1);
-  transition: 0.25s ease-in;
+  transition: 0.15s ease-in-out;
 }
 
+#custom-amount {
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
 
-/* responsive media query  */
+#custom-amount::placeholder {
+  color: rgba(179, 179, 179, 1);
+  font-family: Poppins;
+  font-size: 2.2rem;
+  font-weight: 400;
+  line-height: 3rem;
+  text-align: center;
+}
+
+.donate input {
+  color: rgba(255, 89, 89, 1);
+  font-family: Poppins;
+  font-size: 2.2rem;
+  font-weight: 400;
+  line-height: 3rem;
+  text-align: center;
+  border: none;
+  border-bottom: 2px solid rgba(218, 218, 218, 1);
+  margin-bottom: 30px;
+}
+
+.donate input:focus {
+  outline: none;
+  border-bottom: 2px solid rgba(255, 89, 89, 1);
+  transition: 0.2s ease-out;
+}
+
+/* donate plan section related styles */
+
+.donate-plan .section-title {
+  margin-bottom: 20px;
+}
+
+.donate-plan .section-description {
+  margin-bottom: 50px;
+}
+
+.donate-plan .donate-plan-container {
+  display: flex;
+  gap: 30px;
+  justify-content: space-around;
+  margin-bottom: 130px;
+}
+
+.donate-plan-container .plan-card {
+  padding: 63px 22px 54px 22px;
+}
+
+.card-title {
+  color: rgba(18, 18, 18, 1);
+  font-family: Poppins;
+  font-size: 2.8rem;
+  font-weight: 600;
+  line-height: 4rem;
+  margin-top: 31px;
+  margin-bottom: 16px;
+}
+
+.card-description{
+  color: rgba(112, 112, 112, 1);
+  font-family: Poppins;
+  font-size: 1.9rem;
+  font-weight: 400;
+  line-height: 2.5rem;
+  max-width: 315px;
+}
+
+/* responsive media query (for mobile) */
 
 @media screen and (max-width: 576px) {
   /* banner section */
@@ -98,5 +237,30 @@ header {
     font-size: 4.5rem;
     line-height: 5.9rem;
   }
+
+  /* donate section */
+
+  .section-title {
+    padding: 0 20px;
+  }
+
+  .section-description{
+    padding: 0 20px;
+  }
+
+  .donate-amount-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
 }
 
+/* for medium device (tab) media query */
+
+@media screen and (min-width:576px) and (max-width: 992px) {
+  /* donate section */
+  .donate .donate-amount-container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px;
+  }
+
+}
