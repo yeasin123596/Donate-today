@@ -278,6 +278,53 @@ header {
   margin-top: 10px;
 }
 
+/* update section related styles */
+
+.updates .section-title {
+  margin-bottom: 20px;
+}
+
+.updates .section-description {
+  margin-bottom: 50px;
+}
+
+.updates .email {
+  max-width: 1100px;
+  height: 250px;
+  background: rgba(255, 244, 214, 1);
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 130px;
+}
+
+.email > input {
+  max-width: 350px;
+  height: 60px;
+  outline: none;
+  border: none;
+  border-radius: 5px 0px 0px 5px;
+  background: rgba(217, 217, 217, 1);
+  color: rgba(255, 89, 89, 1);
+  font-size: 2rem;
+  font-weight: 500;
+  padding: 14px 17px;
+}
+
+.email > input::placeholder {
+  color: rgba(170, 159, 159, 1);
+  font-size: 2rem;
+  font-weight: 500;
+  /* padding: 0px 17px; */
+}
+
+.email .btn-primary {
+  margin-bottom: 0;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0 ;
+}
+
 
 /* responsive media query (for mobile) */
 
@@ -331,6 +378,17 @@ header {
     border-radius: 33px;
   }
 
+  /* update section  */
+  .updates  .email {
+    max-width: 391px;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .email > input {
+    max-width: 329px;
+  }
+
 }
 
 /* for medium device (tab) media query */
@@ -363,6 +421,11 @@ header {
 
   .depend-container img {
     border-radius: 10px;
+  }
+
+  /* update section  */
+  .updates .email {
+    max-width: 876px;
   }
 
 
